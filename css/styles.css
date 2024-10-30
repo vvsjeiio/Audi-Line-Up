@@ -1,0 +1,163 @@
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+html {
+    -ms-overflow-style: none;
+}
+
+@font-face {
+    font-family: 'AudiTypeExtendedBold';
+    src: url(assets/fonts/auditype_extendedbold.tff);
+}
+
+@font-face {
+    font-family: 'AudiTypeExtendedNormal';
+    src: url(assets/fonts/auditype_extendednormal.tff);
+}
+
+
+body {
+    font-family: 'AudiTypeExtendedNormal', Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    color: #333;
+}
+
+.language-switch {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.lang-button {
+    border: 0px;
+    background-color: transparent;
+    padding: 0 0.5em 0 0.5em;
+    cursor: pointer;
+    height: 37px;
+}
+
+.lang-button>img {
+    width: 15px;
+}
+
+h1 {
+    font-family: 'AudiTypeExtendedBold', Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    /* gap: 15px; */
+    border-radius: 4em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-button {
+    padding: 10px 50px;
+    font-family: 'AudiTypeExtendedBold', Arial, sans-serif;
+    background-color: transparent;
+    border: 0px solid #ccc;
+    /* border-radius: 8px; */
+    cursor: pointer;
+    /* transition: box-shadow 0.3s; */
+}
+
+.model-button:hover {
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+    background-color: #f9f9f9;
+}
+
+.model-details {
+    max-width: 800px;
+    margin: 20px auto;
+    /* padding: 20px; */
+    /* border-top: 1px solid #ccc; */
+}
+
+.model-card {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+
+}
+
+.model-title {
+    font-family: 'AudiTypeExtendedBold', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.model-date {
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 0;
+}
+
+.phase-section {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+.carousel {
+    display: flex;
+}
+
+.carousel img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.specs-overview {
+    margin-top: 10px;
+}
+
+.show-specs-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #eee;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'AudiTypeExtendedBold', Arial, sans-serif;
+    transition: box-shadow 0.3s;
+}
+
+.show-specs-button:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    display: none;
+}
+
+.specs-table th,
+.specs-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
