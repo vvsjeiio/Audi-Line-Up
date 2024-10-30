@@ -11,8 +11,8 @@ const models = [
                         phase: "Phase I",
                         years: { fr: "2010 - 2015", en: "2010 - 2015" },
                         images: [
-                            "assets/images/a1-8x-phase1-1.jpg",
-                            "assets/images/a1-8x-phase1-2.jpg"
+                            "./assets/images/a1-8x-phase1-1.jpg",
+                            "a./ssets/images/a1-8x-phase1-2.jpg"
                         ],
                         specs: [
                             { configuration: "1.2 TFSI", power: "86 ch", torque: "160 Nm", transmission: "Manuelle", consumption: "5.5 L/100km", alimentation: "Turbo" },
