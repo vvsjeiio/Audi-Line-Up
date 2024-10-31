@@ -20,12 +20,18 @@ const models = [
                         phase: "Phase I",
                         years: { fr: "2010 - 2014", en: "2010 - 2014" },
                         images: [
-                            "./2assets/images/a1-8x-phase1-1.jpg",
-                            "./2assets/images/a1-8x-phase1-2.jpg"
+                            "./assets/images/a1-8x-phase1-1.png",
+                            "./assets/images/a1-8x-phase1-2.png",
                         ],
                         specs: [
-                            { motor: "1.2 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 in line cylinders" }, power: "86 ch", torque: "160 Nm", transmission: { fr: "Manuelle 5", en: "Manual 5" }, consumption: "5.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
-                            { motor: "1.4 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 in line cylinders" }, power: "122 ch", torque: "200 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 &nbsp S-Tronic 7" }, consumption: "5.3 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.2 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "86 ch", torque: "160 Nm", transmission: { fr: "Manuelle 5", en: "Manual 5" }, consumption: "5.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "122 ch", torque: "200 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 / S-Tronic 7" }, consumption: "5.3 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI COD", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "140 ch", torque: "250 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 / S-Tronic 7" }, consumption: "4.9 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "185 ch", torque: "250 Nm", transmission: { fr: "S-Tronic 7", en: "S-Tronic 7" }, consumption: "5.9 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "2.0 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "231 ch", torque: "370 Nm", transmission: { fr: "Manuelle 6", en: "Manual 6" }, consumption: "8.5 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TDI", configuration: { fr: "3 cylindres en ligne", en: "3 cylinders in line" }, power: "90 ch", torque: "230 Nm", transmission: { fr: "Manuelle 5 / S-Tronic 7", en: "Manual 5 / S-Tronic 7" }, consumption: "3.8 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.6 TDI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "105 ch", torque: "250 Nm", transmission: { fr: "Manuelle 5", en: "Manual 5" }, consumption: "3.8 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "2.0 TDI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "143 ch", torque: "320 Nm", transmission: { fr: "Manuelle 6", en: "Manual 6" }, consumption: "4.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
 
                         ],
                     },
@@ -33,14 +39,49 @@ const models = [
                         phase: "Phase II",
                         years: { fr: "2015 - 2018", en: "2015 - 2018" },
                         images: [
-                            "./assets/images/a1-8x-phase2-1.jpg",
-                            "./assets/images/a1-8x-phase2-2.jpg"
+                            "./assets/images/a1-8x-phase2-1.png",
+                            "./assets/images/a1-8x-phase2-2.png"
                         ],
                         specs: [
+                            { motor: "1.2 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "86 ch", torque: "160 Nm", transmission: { fr: "Manuelle 5", en: "Manual 5" }, consumption: "5.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "122 ch", torque: "200 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 / S-Tronic 7" }, consumption: "5.3 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI COD", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "140 ch", torque: "250 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 / S-Tronic 7" }, consumption: "4.9 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "185 ch", torque: "250 Nm", transmission: { fr: "S-Tronic 7", en: "S-Tronic 7" }, consumption: "5.9 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "2.0 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "231 ch", torque: "370 Nm", transmission: { fr: "Manuelle 6", en: "Manual 6" }, consumption: "8.5 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.4 TDI", configuration: { fr: "3 cylindres en ligne", en: "3 cylinders in line" }, power: "90 ch", torque: "230 Nm", transmission: { fr: "Manuelle 5 / S-Tronic 7", en: "Manual 5 / S-Tronic 7" }, consumption: "3.8 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "1.6 TDI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "105 ch", torque: "250 Nm", transmission: { fr: "Manuelle 5", en: "Manual 5" }, consumption: "3.8 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "2.0 TDI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "143 ch", torque: "320 Nm", transmission: { fr: "Manuelle 6", en: "Manual 6" }, consumption: "4.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+
                         ]
                     }
                 ]
-            }
+            },
+            {
+                name: "Audi A1",
+                code: "GB",
+                gen_number: "2",
+                period: { fr: "2019 - présent", en: "2019 - today" },
+                type: "Sportback",
+                other_types: [
+                ],
+                phases: [
+                    {
+                        phase: "Phase I",
+                        years: { fr: "2019 - présent", en: "2019 - today" },
+                        images: [
+                            "./assets/images/a1-GB-phase1-1.png",
+                            "./assets/images/a1-GB-phase1-2.png"
+                        ],
+                        specs: [
+                            { motor: "25 TFSI", configuration: { fr: "3 cylindres en ligne", en: "3 cylinders in line" }, power: "95 ch", torque: "175 Nm", transmission: { fr: "Manuelle 5 / S-Tronic 7", en: "Manual 5 / S-Tronic 7" }, consumption: "6.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "30 TFSI", configuration: { fr: "3 cylindres en ligne", en: "3 cylinders in line" }, power: "116 ch", torque: "200 Nm", transmission: { fr: "Manuelle 6 / S-Tronic 7", en: "Manual 6 / S-Tronic 7" }, consumption: "6.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "35 TFSI COD", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "150 ch", torque: "250 Nm", transmission: { fr: "S-Tronic 7", en: "S-Tronic 7" }, consumption: "6.3 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+                            { motor: "35 TFSI", configuration: { fr: "4 cylindres en ligne", en: "4 cylinders in line" }, power: "200 ch", torque: "320 Nm", transmission: { fr: "S-Tronic 6", en: "S-Tronic 6" }, consumption: "7.1 L/100km", alimentation: { fr: "Turbo", en: " Turbo" } },
+
+                        ],
+                    }
+                ]
+            },
         ]
     },
     {
@@ -49,6 +90,7 @@ const models = [
             {
                 name: "Audi A3 8P",
                 code: "8P",
+                gen_number: "1",
                 period: { fr: "2003 - 2013", en: "2003 - 2013" },
                 phases: [
                     {
@@ -59,8 +101,8 @@ const models = [
                             en: "Introduction of the first generation Audi A3."
                         },
                         images: [
-                            "assets/images/a3-8p-phase1-1.jpg",
-                            "assets/images/a3-8p-phase1-2.jpg"
+                            "assets/images/a3-8p-phase1-1.png",
+                            "assets/images/a3-8p-phase1-2.png"
                         ],
                         specs: [
                             { configuration: "1.6 FSI", power: "115 ch", torque: "148 Nm", transmission: "Manuelle", consumption: "6.5 L/100km", alimentation: "Atmosphérique" },

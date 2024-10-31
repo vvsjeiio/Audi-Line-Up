@@ -6,13 +6,27 @@ const translations = {
         title: "Audi Série A",
         period: "Période",
         specs: "Caractéristiques principales",
-        showMotorizations: "Motorisation"
+        showMotorizations: "Motorisation",
+        motor: "Moteur",
+        configuration: "Configuration",
+        power: "Puissance",
+        torque: "Couple",
+        gearbox: "Boite de vitesse",
+        cumsuption: "Consommation",
+        alimentation: "Alimentation"
     },
     en: {
         title: "Audi A Series",
         period: "Period",
         specs: "Main Features",
-        showMotorizations: "Powertrain"
+        showMotorizations: "Powertrain",
+        motor: "Motor",
+        configuration: "Configuration",
+        power: "Power",
+        torque: "Torque",
+        gearbox: "Gearbox",
+        cumsuption: "Cumsuption",
+        alimentation: "Alimentation"
     }
 };
 
@@ -73,12 +87,20 @@ function displayModelDetails(model) {
                 <p class="model-date">${phase.years[currentLanguage]}</p>
 
                 <div class="carousel">
-                    ${phase.images.map(image => `<img src="${image}" alt="${phase.phase} - ${generation.name}" class="slide">`).join('')}
+                    ${phase.images.map(image => `<img src="${image}" alt="${phase.phase} - ${generation.name}">`).join('')}
                 </div>
 
                 <button class="show-specs-button">+ ${translations[currentLanguage].showMotorizations}</button>
                 <table class="specs-table">
-                    <tr><th>Motor</th><th>Configuration</th><th>Puissance</th><th>Couple</th><th>Boîte de vitesse</th><th>Consommation</th><th>Alimentation</th></tr>
+                    <tr>
+                        <th>${translations[currentLanguage].motor}</th>
+                        <th>${translations[currentLanguage].configuration}</th>
+                        <th>${translations[currentLanguage].power}</th>
+                        <th>${translations[currentLanguage].torque}</th>
+                        <th>${translations[currentLanguage].gearbox}</th>
+                        <th>${translations[currentLanguage].cumsuption}</th>
+                        <th>${translations[currentLanguage].alimentation}</th>
+                    </tr>
                     ${phase.specs.map(spec => `
                         <tr>
                             <td>${spec.motor}</td>
