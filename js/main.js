@@ -6,13 +6,13 @@ const translations = {
         title: "Audi Série A",
         period: "Période",
         specs: "Caractéristiques principales",
-        showMotorizations: "+ Motorisation"
+        showMotorizations: "Motorisation"
     },
     en: {
         title: "Audi A Series",
         period: "Period",
         specs: "Main Features",
-        showMotorizations: "+ Powertrain"
+        showMotorizations: "Powertrain"
     }
 };
 
@@ -60,7 +60,7 @@ function displayModelDetails(model) {
         generationCard.classList.add("model-card");
 
         generationCard.innerHTML = `
-            <h2 class="model-title">${generation.name}</h2>
+            <h2 class="model-title">${generation.name} ${generation.type} (${generation.code})</h2>
             <p class="model-date">${generation.period[currentLanguage]}</p>
         `;
 
@@ -69,23 +69,25 @@ function displayModelDetails(model) {
             phaseSection.classList.add("phase-section");
 
             phaseSection.innerHTML = `
-                <h3>${phase.phase} (${phase.years[currentLanguage]})</h3>
+                <h3>${phase.phase}</h3>
+                <p class="model-date">${phase.years[currentLanguage]}</p>
 
                 <div class="carousel">
-                    ${phase.images.map(image => `<img src="${image}" alt="${phase.phase} - ${generation.name}">`).join('')}
+                    ${phase.images.map(image => `<img src="${image}" alt="${phase.phase} - ${generation.name}" class="slide">`).join('')}
                 </div>
 
-                <button class="show-specs-button">${translations[currentLanguage].showMotorizations}</button>
+                <button class="show-specs-button">+ ${translations[currentLanguage].showMotorizations}</button>
                 <table class="specs-table">
-                    <tr><th>Configuration</th><th>Puissance</th><th>Couple</th><th>Boîte de vitesse</th><th>Consommation</th><th>Alimentation</th></tr>
+                    <tr><th>Motor</th><th>Configuration</th><th>Puissance</th><th>Couple</th><th>Boîte de vitesse</th><th>Consommation</th><th>Alimentation</th></tr>
                     ${phase.specs.map(spec => `
                         <tr>
-                            <td>${spec.configuration}</td>
+                            <td>${spec.motor}</td>
+                            <td>${spec.configuration[currentLanguage]}</td>
                             <td>${spec.power}</td>
                             <td>${spec.torque}</td>
-                            <td>${spec.transmission}</td>
+                            <td>${spec.transmission[currentLanguage]}</td>
                             <td>${spec.consumption}</td>
-                            <td>${spec.alimentation}</td>
+                            <td>${spec.alimentation[currentLanguage]}</td>
                         </tr>
                     `).join('')}
                 </table>
@@ -94,12 +96,16 @@ function displayModelDetails(model) {
             const specsButton = phaseSection.querySelector(".show-specs-button");
             const specsTable = phaseSection.querySelector(".specs-table");
             specsButton.addEventListener("click", () => {
-                specsTable.style.display = specsTable.style.display === "none" ? "table" : "none";
+                specsTable.style.display = specsTable.style.display === "table" ? "none" : "table";
+                const isVisible = specsTable.style.display === "table";
+                specsButton.textContent = (isVisible ? "- " : "+ ") + translations[currentLanguage].showMotorizations;
             });
 
             generationCard.appendChild(phaseSection);
+
         });
 
         modelDetails.appendChild(generationCard);
     });
 }
+
